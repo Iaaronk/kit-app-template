@@ -59,13 +59,14 @@ class TestAppStartup(AsyncTestCase):
         for _ in range(60):
             await omni.kit.app.get_app().next_update_async()
 
-        self.app_startup_time(self.id())
-        self.assertTrue(True)
+        startup_time = self.app_startup_time(self.id())
+        self.assertGreater(startup_time, 0)
 
     async def test_l1_app_startup_warning_count(self):
         """Get the count of warnings during startup - send to nvdf"""
         for _ in range(60):
             await omni.kit.app.get_app().next_update_async()
 
-        self.app_startup_warning_count(self.id())
-        self.assertTrue(True)
+        warning_count, error_count = self.app_startup_warning_count(self.id())
+        self.assertGreaterEqual(warning_count, 0)
+        self.assertGreaterEqual(error_count, 0)
