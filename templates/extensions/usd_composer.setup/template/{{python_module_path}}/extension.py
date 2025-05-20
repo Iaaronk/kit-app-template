@@ -407,7 +407,7 @@ class CreateSetupExtension(omni.ext.IExt):
                 "Layout",
                 [
                     MenuLayout.Item("Default", source="Reset Layout"),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item(
                         "UI Toggle Visibility",
                         source="Window/UI Toggle Visibility"
@@ -415,14 +415,14 @@ class CreateSetupExtension(omni.ext.IExt):
                     MenuLayout.Item(
                         "Fullscreen Mode", source="Window/Fullscreen Mode"
                     ),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item(
                         "Save Layout", source="Window/Layout/Save Layout..."
                     ),
                     MenuLayout.Item(
                         "Load Layout", source="Window/Layout/Load Layout..."
                     ),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item(
                         "Quick Save", source="Window/Layout/Quick Save"
                     ),
