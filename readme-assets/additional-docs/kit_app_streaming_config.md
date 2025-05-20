@@ -75,3 +75,15 @@ If you added the **Omniverse Kit App Streaming** layer, you can test your applic
 ## Additional Resources
 
 - [Kit SDK Companion Tutorial](https://docs.omniverse.nvidia.com/kit/docs/kit-app-template/latest/docs/intro.html)
+
+## Avatar-Based Product Configurators
+
+When building a configurator that lets users virtually try on clothing, you can leverage the streaming configuration described above. Start by creating base avatars in Character Creator 4 and import them as USD assets. Clothing authored in your DCC tool should be referenced into the scene so it attaches cleanly to the avatar.
+
+To ensure garments conform to different body shapes:
+1. Author clothing with morph targets that match the avatar rig.
+2. Apply those morphs whenever the avatar shape is adjusted by the user.
+3. Test the results using the local streaming workflow before deploying.
+
+These steps allow your streamed application to display avatars and clothing that respond to user-driven shape adjustments.
+

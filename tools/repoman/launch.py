@@ -370,9 +370,10 @@ def select_kit(target_directory: Path, config: dict) -> str:
         _quiet_error(err_msg)
 
     elif sum(len(apps) for apps in type_sorted_apps.values()) == 1:
-        # If a single app is present automatically select it.
-        single_type = next(iter(type_sorted_apps))
-        return type_sorted_apps[single_type][0]
+        # If a single application exists across all types, return it directly.
+        for apps in type_sorted_apps.values():
+            if apps:
+                return apps[0]
 
     else:
         # perform a select to set app_name
