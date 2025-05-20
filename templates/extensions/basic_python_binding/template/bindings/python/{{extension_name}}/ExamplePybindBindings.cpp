@@ -56,44 +56,44 @@ public:
     {
     }
 
-    // To deomnstrate binding a fuction that accepts an argument.
+    // To demonstrate binding a function that accepts an argument.
     void multiplyIntProperty(int value)
     {
         m_memberInt *= value;
     }
 
-    // To deomnstrate binding a fuction that returns a value.
+    // To demonstrate binding a function that returns a value.
     bool toggleBoolProperty()
     {
         m_memberBool = !m_memberBool;
         return m_memberBool;
     }
 
-    // To deomnstrate binding a fuction that accepts an argument and returns a value.
+    // To demonstrate binding a function that accepts an argument and returns a value.
     const char* appendStringProperty(const char* value)
     {
         m_memberString += value;
         return m_memberString.c_str();
     }
 
-    // To deomnstrate binding properties using accessors.
+    // To demonstrate binding properties using accessors.
     const char* getMemberString() const
     {
         return m_memberString.c_str();
     }
 
-    // To deomnstrate binding properties using accessors.
+    // To demonstrate binding properties using accessors.
     void setMemberString(const char* value)
     {
         m_memberString = value;
     }
 
-    // To deomnstrate binding properties directly.
+    // To demonstrate binding properties directly.
     int m_memberInt;
     bool m_memberBool;
 
 private:
-    // To deomnstrate binding properties using accessors.
+    // To demonstrate binding properties using accessors.
     std::string m_memberString;
 };
 
@@ -172,7 +172,7 @@ PYBIND11_MODULE({{ library_name }}, m)
              )")
         .def("multiply_int_property", &Python{{object_name}}::multiplyIntProperty,
              R"(
-             Bound fuction that accepts an argument.
+             Bound function that accepts an argument.
 
              Args:
                  value_to_multiply: The value to multiply by.
@@ -180,14 +180,14 @@ PYBIND11_MODULE({{ library_name }}, m)
              py::arg("value_to_multiply"))
         .def("toggle_bool_property", &Python{{object_name}}::toggleBoolProperty,
              R"(
-             Bound fuction that returns a value.
+             Bound function that returns a value.
 
              Return:
                  The toggled bool value.
              )")
         .def("append_string_property", &Python{{object_name}}::appendStringProperty, py::return_value_policy::reference,
              R"(
-             Bound fuction that accepts an argument and returns a value.
+             Bound function that accepts an argument and returns a value.
 
              Args:
                  value_to_append: The value to append.
