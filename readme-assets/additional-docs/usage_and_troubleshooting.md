@@ -109,3 +109,14 @@ When performing extensive local testing of container images created via `repo pa
     - **Warning**: Use this command carefully, as it will remove many resources indiscriminately. Ensure you review and understand what will be deleted.
 
 For image-specific cleanup, use `docker images` to list all images and `docker rmi <image>` to manually remove those that are no longer needed.
+
+### SDXL Extension Import Error
+
+If you encounter the following message when attempting to enable the `sdxl.ext` extension:
+
+```text
+Failed to import python module sdxl.ext ...
+SyntaxError: '(' was never closed (extension.py, line 65)
+```
+
+This error typically indicates a malformed `print` statement in the extension's `extension.py` file. Verify that the statement on the specified line has the correct closing parenthesis or update the extension with a fixed version.
