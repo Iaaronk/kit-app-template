@@ -14,7 +14,7 @@ from omni.kit.test import AsyncTestCase
 
 class TestUSDViewerExtensions(AsyncTestCase):
     """Class to hold USD Viewer setup extension tests."""
-    # NOTE: Function pulled to remove dependency from omni.kit.core.tests"""
+    # NOTE: Function pulled to remove dependency from omni.kit.core.tests
 
     def _validate_extensions_load(self):
         failures = []
