@@ -396,24 +396,24 @@ class SetupExtension(omni.ext.IExt):
                     MenuLayout.Item("New From Stage Template"),
                     MenuLayout.Item("Open"),
                     MenuLayout.Item("Open Recent"),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item("Re-open with New Edit Layer"),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item("Share"),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item("Save"),
                     MenuLayout.Item("Save As..."),
                     MenuLayout.Item("Save With Options"),
                     MenuLayout.Item("Save Selected"),
                     MenuLayout.Item("Save Flattened As...", remove=True),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item("Collect As..."),
                     MenuLayout.Item("Export"),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item("Import"),
                     MenuLayout.Item("Add Reference"),
                     MenuLayout.Item("Add Payload"),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item("Exit"),
                 ]
             )
@@ -553,7 +553,7 @@ class SetupExtension(omni.ext.IExt):
                     MenuLayout.Item("Viewport Only"),
                     MenuLayout.Item("Markup Editor"),
                     MenuLayout.Item("Waypoint Viewer"),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item(
                         "UI Toggle Visibility",
                         source="Window/UI Toggle Visibility"
@@ -562,7 +562,7 @@ class SetupExtension(omni.ext.IExt):
                         "Fullscreen Mode",
                         source="Window/Fullscreen Mode"
                     ),
-                    MenuLayout.Seperator(),
+                    MenuLayout.Separator(),
                     MenuLayout.Item(
                         "Save Layout",
                         source="Window/Layout/Save Layout..."
